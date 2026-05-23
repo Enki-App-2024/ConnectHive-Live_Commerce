@@ -1,0 +1,202 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&family=Playfair+Display:wght@700;800;900&display=swap");
+
+.help-tip,
+.empty-state-card,
+.onboarding-card {
+  font-family: Inter, system-ui, sans-serif;
+}
+
+.help-tip {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 16px;
+  border-radius: 22px;
+  border: 1px solid rgba(7, 21, 43, 0.1);
+  background:
+    linear-gradient(135deg, rgba(255, 248, 232, 0.92), rgba(255, 255, 255, 0.84));
+  box-shadow: 0 16px 44px rgba(7, 21, 43, 0.06);
+  color: #07152b;
+}
+
+.help-tip.compact {
+  padding: 12px;
+  border-radius: 18px;
+}
+
+.help-tip.blue {
+  background:
+    linear-gradient(135deg, rgba(7, 21, 43, 0.08), rgba(255, 255, 255, 0.9));
+}
+
+.help-tip-icon,
+.empty-state-icon {
+  width: 42px;
+  height: 42px;
+  flex: 0 0 42px;
+  display: grid;
+  place-items: center;
+  border-radius: 16px;
+  background: #07152b;
+  color: #f5a400;
+  box-shadow: 0 12px 28px rgba(7, 21, 43, 0.16);
+}
+
+.help-tip-copy strong {
+  display: block;
+  color: #07152b;
+  font-weight: 950;
+  letter-spacing: -0.02em;
+}
+
+.help-tip-copy p {
+  margin: 5px 0 0;
+  color: #475569;
+  font-size: 0.93rem;
+  line-height: 1.55;
+}
+
+.empty-state-card {
+  display: grid;
+  justify-items: center;
+  text-align: center;
+  gap: 10px;
+  padding: 30px 22px;
+  border-radius: 28px;
+  border: 1px dashed rgba(7, 21, 43, 0.16);
+  background:
+    radial-gradient(circle at top, rgba(245, 164, 0, 0.16), transparent 36%),
+    rgba(255, 255, 255, 0.75);
+  color: #07152b;
+}
+
+.empty-state-card h3 {
+  margin: 6px 0 0;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 1.55rem;
+  letter-spacing: -0.03em;
+}
+
+.empty-state-card p {
+  max-width: 560px;
+  margin: 0;
+  color: #64748b;
+  line-height: 1.65;
+  font-weight: 650;
+}
+
+.empty-state-action {
+  margin-top: 8px;
+}
+
+.onboarding-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  display: grid;
+  place-items: center;
+  padding: 18px;
+  background: rgba(7, 21, 43, 0.62);
+  backdrop-filter: blur(14px);
+}
+
+.onboarding-card {
+  width: min(520px, 100%);
+  padding: 30px;
+  border-radius: 32px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(255, 248, 232, 0.96));
+  border: 1px solid rgba(255, 255, 255, 0.46);
+  box-shadow: 0 30px 90px rgba(0, 0, 0, 0.28);
+}
+
+.onboarding-kicker {
+  display: inline-flex;
+  padding: 9px 13px;
+  border-radius: 999px;
+  background: #07152b;
+  color: #f5a400;
+  font-size: 12px;
+  font-weight: 950;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.onboarding-card h2 {
+  margin: 18px 0 0;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  line-height: 0.95;
+  letter-spacing: -0.06em;
+  color: #07152b;
+}
+
+.onboarding-card p {
+  margin: 16px 0 0;
+  color: #475569;
+  line-height: 1.7;
+  font-weight: 650;
+}
+
+.onboarding-progress {
+  display: flex;
+  gap: 8px;
+  margin: 22px 0;
+}
+
+.onboarding-progress span {
+  height: 8px;
+  width: 100%;
+  border-radius: 999px;
+  background: rgba(7, 21, 43, 0.12);
+}
+
+.onboarding-progress span.active {
+  background: #f5a400;
+}
+
+.onboarding-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.guide-btn {
+  border: none;
+  border-radius: 999px;
+  padding: 13px 18px;
+  font-weight: 950;
+  cursor: pointer;
+}
+
+.guide-btn.primary {
+  background: linear-gradient(135deg, #f5a400, #ffbf3d);
+  color: #07152b;
+  box-shadow: 0 16px 34px rgba(245, 164, 0, 0.25);
+}
+
+.guide-btn.secondary {
+  background: #ffffff;
+  color: #07152b;
+  border: 1px solid rgba(7, 21, 43, 0.12);
+}
+
+@media (max-width: 720px) {
+  .help-tip {
+    flex-direction: column;
+  }
+
+  .onboarding-card {
+    padding: 24px;
+    border-radius: 26px;
+  }
+
+  .onboarding-actions {
+    display: grid;
+  }
+
+  .guide-btn {
+    width: 100%;
+  }
+}

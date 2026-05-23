@@ -1,0 +1,485 @@
+.admin-page {
+  display: grid;
+  gap: 28px;
+  color: #07152b;
+}
+
+.admin-hero {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  align-items: flex-start;
+}
+
+.admin-hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.admin-sync-pill,
+.status-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 38px;
+  padding: 9px 14px;
+  border-radius: 999px;
+  background: rgba(34, 197, 94, 0.13);
+  color: #15803d;
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 13px;
+  font-weight: 900;
+}
+
+.admin-sync-pill.local {
+  background: rgba(245, 164, 0, 0.16);
+  color: #b45309;
+}
+
+.admin-sync-pill.checking {
+  background: rgba(7, 21, 43, 0.08);
+  color: #475569;
+}
+
+.admin-command-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.admin-metric-card,
+.admin-panel-card,
+.admin-users-panel {
+  border: 1px solid rgba(7, 21, 43, 0.1);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.82), rgba(255, 248, 232, 0.72)),
+    rgba(255, 255, 255, 0.78);
+  border-radius: 26px;
+  box-shadow: 0 22px 60px rgba(7, 21, 43, 0.07);
+}
+
+.admin-metric-card {
+  padding: 24px;
+  min-height: 142px;
+}
+
+.admin-metric-card p {
+  color: #64748b;
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.admin-metric-card strong {
+  display: block;
+  margin-top: 10px;
+  font-size: 2.2rem;
+  letter-spacing: -0.04em;
+  color: #07152b;
+}
+
+.admin-metric-card span {
+  display: block;
+  margin-top: 8px;
+  color: #64748b;
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.admin-main-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(320px, 0.75fr);
+  gap: 22px;
+}
+
+.admin-panel-card,
+.admin-users-panel {
+  padding: 24px;
+}
+
+.panel-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  align-items: flex-start;
+  margin-bottom: 22px;
+}
+
+.panel-header h2 {
+  font-size: 1.3rem;
+  color: #07152b;
+}
+
+.panel-header p,
+.admin-panel-card p {
+  margin-top: 7px;
+  color: #64748b;
+  line-height: 1.6;
+  font-family: Inter, system-ui, sans-serif;
+}
+
+.admin-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.admin-form-grid input,
+.admin-form-grid select,
+.admin-form-grid textarea,
+.admin-toolbar input,
+.admin-toolbar select {
+  width: 100%;
+  border: 1px solid rgba(7, 21, 43, 0.14);
+  background: rgba(255, 255, 255, 0.82);
+  color: #07152b;
+  border-radius: 18px;
+  padding: 15px 16px;
+  font: 700 14px Inter, system-ui, sans-serif;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.admin-form-grid textarea {
+  min-height: 110px;
+  resize: vertical;
+  grid-column: 1 / -1;
+}
+
+.admin-form-grid input:focus,
+.admin-form-grid select:focus,
+.admin-form-grid textarea:focus,
+.admin-toolbar input:focus,
+.admin-toolbar select:focus {
+  border-color: rgba(245, 164, 0, 0.75);
+  box-shadow: 0 0 0 4px rgba(245, 164, 0, 0.13);
+  background: #ffffff;
+}
+
+.btn-primary,
+.btn-secondary,
+.btn-ghost,
+.admin-payment-row button,
+.admin-user-actions button {
+  border: none;
+  cursor: pointer;
+  border-radius: 16px;
+  padding: 13px 16px;
+  font: 900 14px Inter, system-ui, sans-serif;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #f5a400, #ffbf3d);
+  color: #07152b;
+  box-shadow: 0 16px 34px rgba(245, 164, 0, 0.25);
+}
+
+.btn-secondary,
+.btn-ghost {
+  background: #ffffff;
+  color: #07152b;
+  border: 1px solid rgba(7, 21, 43, 0.12);
+}
+
+.btn-ghost {
+  padding: 10px 12px;
+  box-shadow: none;
+}
+
+.btn-primary:hover,
+.btn-secondary:hover,
+.btn-ghost:hover,
+.admin-payment-row button:hover,
+.admin-user-actions button:hover {
+  transform: translateY(-1px);
+}
+
+.btn-primary.wide {
+  width: 100%;
+  margin-top: 18px;
+}
+
+.admin-plan-list,
+.admin-payment-list,
+.admin-activity-list,
+.admin-users-list {
+  display: grid;
+  gap: 14px;
+}
+
+.admin-plan-item,
+.admin-payment-row,
+.admin-activity-item,
+.admin-user-row {
+  border: 1px solid rgba(7, 21, 43, 0.08);
+  background: rgba(255, 255, 255, 0.68);
+  border-radius: 22px;
+}
+
+.admin-plan-item {
+  padding: 18px;
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.admin-plan-item strong {
+  display: block;
+  font-size: 1.05rem;
+  color: #07152b;
+}
+
+.admin-plan-item span {
+  display: inline-flex;
+  margin-top: 8px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(245, 164, 0, 0.14);
+  color: #b45309;
+  font: 900 12px Inter, system-ui, sans-serif;
+}
+
+.admin-plan-item b {
+  color: #f5a400;
+  white-space: nowrap;
+}
+
+.admin-payment-row {
+  padding: 18px;
+  display: grid;
+  grid-template-columns: 1.2fr 0.7fr 0.8fr auto;
+  gap: 16px;
+  align-items: center;
+}
+
+.admin-payment-row h3,
+.admin-user-row h3 {
+  color: #07152b;
+  margin-bottom: 6px;
+}
+
+.admin-payment-row p,
+.admin-user-row p,
+.admin-activity-item p {
+  color: #64748b;
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.admin-payment-row strong,
+.admin-user-row strong,
+.admin-activity-item strong {
+  color: #07152b;
+}
+
+.admin-payment-row button,
+.admin-user-actions button {
+  background: #07152b;
+  color: #fff8e8;
+}
+
+.admin-toolbar {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 210px;
+  gap: 14px;
+  margin-bottom: 18px;
+}
+
+.admin-user-row {
+  padding: 18px;
+  display: grid;
+  grid-template-columns: minmax(180px, 1.3fr) 0.55fr 0.7fr auto auto minmax(240px, auto);
+  gap: 16px;
+  align-items: center;
+}
+
+.admin-status,
+.admin-payment {
+  padding: 9px 12px;
+  border-radius: 999px;
+  font: 900 12px Inter, system-ui, sans-serif;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.admin-status.pending,
+.admin-payment.pending {
+  background: rgba(245, 164, 0, 0.14);
+  color: #b45309;
+}
+
+.admin-status.active,
+.admin-payment.verified {
+  background: rgba(34, 197, 94, 0.13);
+  color: #15803d;
+}
+
+.admin-status.suspended,
+.admin-payment.rejected {
+  background: rgba(239, 68, 68, 0.12);
+  color: #b91c1c;
+}
+
+.admin-status.trial,
+.admin-payment.trial {
+  background: rgba(59, 130, 246, 0.12);
+  color: #1d4ed8;
+}
+
+.admin-user-actions {
+  display: flex;
+  gap: 9px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.admin-user-actions button {
+  padding: 10px 12px;
+  border-radius: 13px;
+}
+
+.admin-user-actions button.danger {
+  background: rgba(239, 68, 68, 0.12);
+  color: #b91c1c;
+}
+
+.admin-activity-item {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 12px;
+  padding: 16px;
+  align-items: flex-start;
+}
+
+.admin-activity-item > span {
+  width: 11px;
+  height: 11px;
+  border-radius: 999px;
+  background: #f5a400;
+  margin-top: 5px;
+  box-shadow: 0 0 0 5px rgba(245, 164, 0, 0.13);
+}
+
+.admin-empty-state {
+  padding: 22px;
+  border-radius: 20px;
+  background: rgba(7, 21, 43, 0.05);
+  color: #64748b;
+  font-family: Inter, system-ui, sans-serif;
+  line-height: 1.6;
+}
+
+@media (max-width: 1200px) {
+  .admin-command-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .admin-main-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-user-row {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .admin-user-actions {
+    justify-content: flex-start;
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 760px) {
+  .admin-hero,
+  .panel-header {
+    flex-direction: column;
+  }
+
+  .admin-hero-actions {
+    justify-content: flex-start;
+  }
+
+  .admin-command-grid,
+  .admin-form-grid,
+  .admin-toolbar,
+  .admin-payment-row,
+  .admin-user-row {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-panel-card,
+  .admin-users-panel,
+  .admin-metric-card {
+    border-radius: 22px;
+    padding: 18px;
+  }
+}
+
+
+/* Worldclass admin wiring polish */
+.admin-page .page-title {
+  margin-top: 16px;
+  max-width: 840px;
+  font-size: clamp(3rem, 6vw, 6.6rem);
+  line-height: 0.88;
+  letter-spacing: -0.07em;
+  color: #07152b;
+}
+
+.admin-page .page-title span {
+  color: #f5a400;
+}
+
+.admin-page .page-subtitle {
+  max-width: 780px;
+  margin-top: 16px;
+  color: #334155;
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+.admin-form-card,
+.admin-plans-card {
+  min-height: 100%;
+}
+
+.admin-payment-row button:disabled,
+.admin-user-actions button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.admin-plan-item p {
+  margin-top: 8px;
+}
+
+.admin-payment-row,
+.admin-user-row {
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.admin-payment-row:hover,
+.admin-user-row:hover {
+  transform: translateY(-2px);
+  border-color: rgba(245, 164, 0, 0.25);
+  box-shadow: 0 18px 42px rgba(7, 21, 43, 0.06);
+}
+
+.admin-users-panel {
+  overflow: hidden;
+}
+
+.admin-users-list {
+  min-width: 0;
+}
+
+@media (max-width: 760px) {
+  .admin-page .page-title {
+    font-size: 3.2rem;
+  }
+}

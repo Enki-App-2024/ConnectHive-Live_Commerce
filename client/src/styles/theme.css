@@ -1,0 +1,205 @@
+.landing-page {
+  min-height: 100vh;
+  padding: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background:
+    radial-gradient(circle at top left,
+      rgba(245, 185, 66, 0.2),
+      transparent 28%),
+    linear-gradient(
+      135deg,
+      #fff8e8 0%,
+      #f5ecd8 45%,
+      #07152b 45%,
+      #07152b 100%
+    );
+}
+
+.hero-card {
+  width: min(1100px, 100%);
+  min-height: 620px;
+
+  position: relative;
+  overflow: hidden;
+
+  border-radius: 34px;
+
+  padding: 48px;
+
+  background: rgba(255, 249, 236, 0.92);
+
+  border: 1px solid rgba(245, 185, 66, 0.25);
+
+  box-shadow: 0 30px 90px rgba(7, 21, 43, 0.18);
+}
+
+.live-badge {
+  display: inline-flex;
+
+  padding: 12px 18px;
+
+  border-radius: 999px;
+
+  background: #07152b;
+
+  color: #f5b942;
+
+  font-size: 12px;
+
+  letter-spacing: 1.5px;
+
+  font-weight: 700;
+}
+
+.hero-title {
+  margin-top: 24px;
+
+  font-size: clamp(4rem, 9vw, 7rem);
+
+  line-height: 0.92;
+
+  color: #07152b;
+
+  max-width: 700px;
+}
+
+.hero-title span {
+  color: #f5a400;
+}
+
+.hero-subtitle {
+  margin-top: 24px;
+
+  max-width: 650px;
+
+  font-size: 1.12rem;
+
+  line-height: 1.8;
+
+  color: #26364f;
+
+  font-family: Inter, sans-serif;
+}
+
+.hero-actions {
+  margin-top: 34px;
+
+  display: flex;
+
+  gap: 16px;
+
+  flex-wrap: wrap;
+}
+
+.primary-btn {
+  border: none;
+
+  padding: 16px 28px;
+
+  border-radius: 18px;
+
+  background: linear-gradient(
+    135deg,
+    #f5b942,
+    #f59e0b
+  );
+
+  color: #07152b;
+
+  font-weight: 800;
+
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+.primary-btn:hover {
+  transform: translateY(-2px);
+}
+
+.secondary-btn {
+  border: 1px solid rgba(7, 21, 43, 0.15);
+
+  padding: 16px 28px;
+
+  border-radius: 18px;
+
+  background: rgba(255, 255, 255, 0.7);
+
+  color: #07152b;
+
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+.preview-phone {
+  position: absolute;
+
+  right: 48px;
+
+  bottom: 48px;
+
+  width: 310px;
+
+  border-radius: 34px;
+
+  padding: 28px;
+
+  background: linear-gradient(
+    180deg,
+    #07152b,
+    #050b18
+  );
+
+  border: 1px solid rgba(245, 185, 66, 0.25);
+
+  color: #fff8e8;
+
+  box-shadow: 0 24px 60px rgba(7, 21, 43, 0.35);
+}
+
+.phone-bar {
+  width: 80px;
+
+  height: 6px;
+
+  border-radius: 999px;
+
+  background: rgba(255, 255, 255, 0.25);
+
+  margin: 0 auto 24px;
+}
+
+.preview-phone h2 {
+  color: #f5b942;
+
+  margin-bottom: 10px;
+}
+
+.preview-phone p {
+  color: #d1d5db;
+
+  font-size: 14px;
+}
+
+.order-card {
+  margin-top: 16px;
+
+  padding: 16px;
+
+  border-radius: 18px;
+
+  background: rgba(255, 255, 255, 0.08);
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 12px;
+}
