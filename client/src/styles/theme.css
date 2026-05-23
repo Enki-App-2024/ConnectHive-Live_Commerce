@@ -203,3 +203,106 @@
 
   gap: 12px;
 }
+/* ========================================
+   MOBILE LANDING FIXES
+======================================== */
+
+html,
+body,
+#root {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  .landing-page {
+    padding: 18px;
+    min-height: auto;
+    align-items: flex-start;
+  }
+
+  .hero-card {
+    width: 100%;
+    min-height: auto;
+
+    padding: 28px 22px 420px;
+
+    border-radius: 30px;
+  }
+
+  .live-badge {
+    font-size: 11px;
+    padding: 10px 16px;
+  }
+
+  .hero-title {
+    margin-top: 18px;
+
+    font-size: clamp(3rem, 16vw, 5rem);
+
+    line-height: 0.92;
+
+    max-width: 100%;
+
+    overflow-wrap: break-word;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+
+    line-height: 1.7;
+
+    max-width: 100%;
+  }
+
+  .hero-actions {
+    width: 100%;
+
+    flex-direction: column;
+  }
+
+  .primary-btn,
+  .secondary-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .preview-phone {
+    position: absolute;
+
+    left: 50%;
+    right: auto;
+
+    bottom: 24px;
+
+    transform: translateX(-50%);
+
+    width: min(100%, 320px);
+
+    padding: 24px;
+
+    border-radius: 30px;
+  }
+
+  .preview-phone h2 {
+    font-size: 1.2rem;
+  }
+
+  .preview-phone p {
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+  .order-card {
+    padding: 14px;
+
+    border-radius: 16px;
+
+    gap: 8px;
+  }
+}
